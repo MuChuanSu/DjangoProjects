@@ -1,0 +1,21 @@
+Initial steps:
+1.django-admin startproject studentproject
+2.in the project file ,python manage.py startapp myapp
+3.md templates and md static to make directories
+4. python manage.py makemigrations to make migration folder
+5. python manage.py migrate to synchronize models into database
+6. python manage.py runserver
+
+in Settings.py
+7.go to settings.py, add myapp in INSTALLED_APPS
+8.add path for templates-'DIRS': [BASE_DIR/'templates'],
+9. add path for static folder STATICFILES_DIRS = [
+    BASE_DIR/'static',
+]
+10.change language code to 'zh-hant',TIME_ZONE to 'Asia/Taipei'
+
+
+11.in views.py, write the function 
+12.in urls.py set url path and the function name to be called, remember to import functions like
+    [from myapp.views import hello]
+13. in the function, use return HTTPResponse for text or return  render to use the html templates 
